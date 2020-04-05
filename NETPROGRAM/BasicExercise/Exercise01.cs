@@ -8,23 +8,19 @@ namespace NETPROGRAM.BasicExercise
         {
             if (a * b == 0) return a + b;
 
-            var numA = (a > b) ? b : a;
-
-            var numB = (a > b) ? a : b;
-
-            while(numA != numB)
+            while(a != b)
             {
-                if(numA > numB)
+                if(a > b)
                 {
-                    numA -= numB;
+                    a -= b;
                 }
                 else
                 {
-                    numB -= numA;
+                    b -= a;
                 }                
             }
 
-            return numA;
+            return a;
         }
 
         public long BCNN(int a, int b)

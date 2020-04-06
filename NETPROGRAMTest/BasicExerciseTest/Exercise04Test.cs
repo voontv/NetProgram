@@ -8,28 +8,18 @@ namespace NETPROGRAMTest.BasicExerciseTest
     {
 
         [TestMethod]
-        public void testFiboInPositionN()
+        
+        public void TestFiboInPositionN()
         {
 
             var test = new Exercise04();
 
-            Assert.AreEqual(test.FiboInPositionN(1), 1);
-            Assert.AreEqual(test.FiboInPositionN(2), 1);
-            Assert.AreEqual(test.FiboInPositionN(5), 5);
-            Assert.AreEqual(test.FiboInPositionN(6), 8);
-        }
-
-        [TestMethod]
-        public void testshowRangeFibo()
-        {
-
-            var test = new Exercise04();
-
-            Assert.AreEqual(test.showRangeFibo(0), "Can not find Fibo number same request");
-            Assert.AreEqual(test.showRangeFibo(2), "1 1 2");
-            Assert.AreEqual(test.showRangeFibo(4), "1 1 2 3");
-            Assert.AreEqual(test.showRangeFibo(5), "1 1 2 3 5");
-            Assert.AreEqual(test.showRangeFibo(6), "1 1 2 3 5");
+            Assert.AreEqual(test.FiboInRangeN(6).Count, 5);
+            Assert.AreEqual(test.FiboInRangeN(6)[4], 5);
+            Assert.AreEqual(test.FiboInRangeN(2).Count, 3);
+            Assert.AreEqual(test.FiboInRangeN(2)[2], 2);
+            Assert.AreEqual(test.FiboInRangeN(1).Count, 2);
+            Assert.AreEqual(test.FiboInRangeN(1)[1], 1);
         }
     }
 }

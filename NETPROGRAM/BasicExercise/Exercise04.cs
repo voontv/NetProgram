@@ -1,48 +1,32 @@
-﻿namespace NETPROGRAM.BasicExercise
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace NETPROGRAM.BasicExercise
 {
     public class Exercise04
     {
 
-        public int FiboInPositionN(int n)
+        public List<int> FiboInRangeN(int n)
         {
-
-            if (n <= 2 && n > 0)
-                return 1;
-
-            return FiboInPositionN(n - 1) + FiboInPositionN(n - 2);
-        }
-
-        public string showRangeFibo(int n)
-        {
-            string rangeFibo = null;
-
-            if(n < 1)
+            if (n < 1)
             {
-                return "Can not find Fibo number same request";
+                throw new Exception("Can not find Fibo number same request");
             }
 
-            for(int i = 0; i<= n; i++)
+            var listNumber = new List<int>() { 1, 1};
+            var i = 2;
+            while (listNumber[i - 2] + listNumber[i - 1] <= n)
             {
-                if (FiboInPositionN(i+1) <= n)
-                {
-
-                    if (rangeFibo != null)
-                    {
-                        rangeFibo += " " + FiboInPositionN(i + 1);
-                    }
-                    else
-                    {
-                        rangeFibo += FiboInPositionN(i + 1);
-                    }
-
-                }
-                else
-                {
-                    break;
-                }
+                listNumber.Add(listNumber[i - 2] + listNumber[i - 1]);
+                i++;
             }
 
-            return rangeFibo;
+            var listNeed = from number in listNumber
+                           where number <= n
+                           select number;
+
+            return listNeed.ToList();
         }
     }
 }

@@ -13,26 +13,26 @@ namespace NETPROGRAMTest.BasicExerciseTest
         {
             var test = new Exercise03();
 
-            Assert.AreEqual(test.isPrime(1), false);
-            Assert.AreEqual(test.isPrime(0), false);
-            Assert.AreEqual(test.isPrime(3), true);
-            Assert.AreEqual(test.isPrime(5), true);
-            Assert.AreEqual(test.isPrime(9), false);
-            Assert.AreEqual(test.isPrime(7), true);
+            Assert.AreEqual(test.IsPrime(1), false);
+            Assert.AreEqual(test.IsPrime(0), false);
+            Assert.AreEqual(test.IsPrime(3), true);
+            Assert.AreEqual(test.IsPrime(5), true);
+            Assert.AreEqual(test.IsPrime(9), false);
+            Assert.AreEqual(test.IsPrime(7), true);
         }
 
         [TestMethod]
-        public void testShowMultiPrime()
+        public void TestShowMultiPrime()
         {
 
             var test = new Exercise03();
 
-            Assert.AreEqual(test.showMultiPrime(9), "3 * 3");
-            Assert.AreEqual(test.showMultiPrime(12), "2 * 2 * 3");
-            Assert.AreEqual(test.showMultiPrime(7), "7");
-            Assert.AreEqual(test.showMultiPrime(33), "3 * 11");
-            Assert.AreEqual(test.showMultiPrime(1), "1");
-            Assert.AreEqual(test.showMultiPrime(0), "0");
+            Assert.AreEqual(test.ShowMultiPrime(9), "3 * 3");
+            Assert.AreEqual(test.ShowMultiPrime(12), "2 * 2 * 3");
+            Assert.AreEqual(test.ShowMultiPrime(7), "7");
+            Assert.AreEqual(test.ShowMultiPrime(33), "3 * 11");
+            Assert.AreEqual(test.ShowMultiPrime(1), "1");
+            Assert.AreEqual(test.ShowMultiPrime(0), "0");
         }
     }
 

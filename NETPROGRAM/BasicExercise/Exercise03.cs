@@ -6,7 +6,7 @@ namespace NETPROGRAM.BasicExercise
     public class Exercise03
     {
 
-        public bool isPrime(int n)
+        public bool IsPrime(int n)
         {
 
             if(n < 2)
@@ -14,7 +14,7 @@ namespace NETPROGRAM.BasicExercise
                 return false;
             }
 
-            for(int i=2; i < n / 2; i++)
+            for(int i=2; i < n / i; i++)
             {
                 if (n % i == 0)
                     return false;
@@ -23,7 +23,7 @@ namespace NETPROGRAM.BasicExercise
             return true;
         }
 
-        public String showMultiPrime(int n)
+        public String ShowMultiPrime(int n)
         {
 
             String stringPrime = null;
@@ -36,7 +36,7 @@ namespace NETPROGRAM.BasicExercise
 
             do
             {
-                if (n % i == 0 && isPrime(i))
+                if (n % i == 0)
                 {
                     if (stringPrime != null)
                     {

@@ -6,7 +6,7 @@ namespace NETPROGRAM.BasicExercise
     public class Exercise05
     {
    
-        public bool checkNumberRequest(int n)
+        public bool CheckNumberRequest(int n)
         {
             int length = n.ToString().Length;
             int result = 0;
@@ -30,7 +30,7 @@ namespace NETPROGRAM.BasicExercise
 
             for(int i = 100; i <= n; i++)
             {
-                if(checkNumberRequest(i))
+                if(CheckNumberRequest(i))
                 {
                     numberList.Add(i);
                 }

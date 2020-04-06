@@ -10,21 +10,20 @@ namespace NETPROGRAMTest.BasicExerciseTest
     {
 
         [TestMethod]
-        public void testCheckNumberRequest()
+        public void TestCheckNumberRequest()
         {
             var test = new Exercise05();
 
-            Assert.AreEqual(test.checkNumberRequest(153), true);
+            Assert.AreEqual(test.CheckNumberRequest(153), true);
         }
 
         [TestMethod]
-        public void testShowListNumber()
+        public void TestShowListNumber()
         {
             var test = new Exercise05();
-            var listTest = new List<int>() { 153 };
 
-            Assert.AreEqual(test.showListNumber(154).IndexOf(0), listTest.IndexOf(0));
-            Assert.AreEqual(test.showListNumber(154).Count, listTest.Count);
+            Assert.AreEqual(test.showListNumber(154).Count, 1);
+            Assert.AreEqual(test.showListNumber(154)[0], 153);
             Assert.AreEqual(test.showListNumber(10000).Count, 7);
         }
     }

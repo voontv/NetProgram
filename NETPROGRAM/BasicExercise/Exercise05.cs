@@ -24,7 +24,7 @@ namespace NETPROGRAM.BasicExercise
             return (result == n);
         }
 
-        public List<int> showListNumber(int n)
+        public List<int> ShowListNumber(int n)
         {
             List<int> numberList = new List<int>();
 

@@ -22,9 +22,9 @@ namespace NETPROGRAMTest.BasicExerciseTest
         {
             var test = new Exercise05();
 
-            Assert.AreEqual(test.showListNumber(154).Count, 1);
-            Assert.AreEqual(test.showListNumber(154)[0], 153);
-            Assert.AreEqual(test.showListNumber(10000).Count, 7);
+            Assert.AreEqual(test.ShowListNumber(154).Count, 1);
+            Assert.AreEqual(test.ShowListNumber(154)[0], 153);
+            Assert.AreEqual(test.ShowListNumber(10000).Count, 7);
         }
     }
 }

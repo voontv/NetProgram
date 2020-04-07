@@ -6,25 +6,41 @@ namespace NETPROGRAM.BasicExercise
     public class Exercise11
     {
 
+        public int LengthBinaryNumber(int n)
+        {
+            if (n == 0)
+            {
+                return 1;
+            }
+
+            var length = 0;
+
+            while (n > 0)
+            {
+                length += 1;
+                n /= 2;
+            }
+
+            return length;
+        }
+
         public int BinaryNumberReverse(int n)
         {
-            var number = 0;
-            var listNumber = new List<int>();
-
+            
             if(n == 0)
             {
                 return 0;
             }
 
-            while(n > 0)
-            {
-                listNumber.Add(n % 2);
-                n /= 2;
-            }
+            var number = 0;
+            var length = LengthBinaryNumber(n);
+            var i = 1;
 
-            for(int i = 0; i<listNumber.Count; i++)
+            while (n > 0)
             {
-                number += listNumber[i] * (int) System.Math.Pow(2, listNumber.Count - i - 1);
+                number += (n % 2) << (length - i);
+                n /= 2;
+                i++;
             }
 
             return number;

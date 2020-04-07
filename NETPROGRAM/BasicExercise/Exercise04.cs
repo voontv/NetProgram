@@ -21,12 +21,8 @@ namespace NETPROGRAM.BasicExercise
                 listNumber.Add(listNumber[i - 2] + listNumber[i - 1]);
                 i++;
             }
-
-            var listNeed = from number in listNumber
-                           where number <= n
-                           select number;
-
-            return listNeed.ToList();
+         
+            return listNumber.ToList();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Linq;
 
 namespace NETPROGRAM.BasicExercise
 {
@@ -8,19 +9,12 @@ namespace NETPROGRAM.BasicExercise
 
         public int SumWithN(int n)
         {
-            if(n < 1)
+            if (n < 1)
             {
                 throw new Exception("Wrong input");
             }
 
-            var sum = 0;
-            
-            for(int i =1; i<=n; i++)
-            {
-                sum += i * (i + 1);
-            }
-
-            return sum;
+            return Enumerable.Range(0, n+1).Aggregate((sum, i) => sum + i * (i + 1));
         }
     }
 }

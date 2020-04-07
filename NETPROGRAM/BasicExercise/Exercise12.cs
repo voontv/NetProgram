@@ -4,6 +4,23 @@ namespace NETPROGRAM.BasicExercise
     public class Exercise12
     {
 
+        public int PowInt(int number, int index)
+        {
+            if (index == 0)
+            {
+                return 1;
+            }
+
+            var pow = 1;
+
+            for (int i = 1; i <= index; i++)
+            {
+                pow *= number;
+            }
+
+            return pow;
+        }
+
         public bool SymmetryNumber(int n)
         {
             var length = n.ToString().Length;
@@ -11,14 +28,9 @@ namespace NETPROGRAM.BasicExercise
             var i = 1;
             var temp = n;
 
-            if(n == 0)
-            {
-                return true;
-            }
-
             while(n != 0)
             {
-                sum += (n % 10) * (int) System.Math.Pow(10, length - i);
+                sum += (n % 10) * PowInt(10, length - i);
                 n /= 10;
                 i++;
             }

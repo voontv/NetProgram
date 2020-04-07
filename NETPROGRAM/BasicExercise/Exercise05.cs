@@ -42,7 +42,7 @@ namespace NETPROGRAM.BasicExercise
             return (result == n);
         }
 
-        public List<int> ShowListNumber(int n)
+        public List<int> FindNumbers(int n)
         {
 
             return Enumerable.Range(100, n-100).Where(s => CheckNumberRequest(s)).ToList();

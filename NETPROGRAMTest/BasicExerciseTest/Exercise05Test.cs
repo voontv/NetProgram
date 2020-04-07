@@ -10,21 +10,32 @@ namespace NETPROGRAMTest.BasicExerciseTest
     {
 
         [TestMethod]
+        public void TestPowInt()
+        {
+            var test = new Exercise05();
+
+            Assert.AreEqual(test.PowInt(2, 3), 8);
+            Assert.AreEqual(test.PowInt(3, 3), 27);
+            Assert.AreEqual(test.PowInt(10, 4), 10000);
+        }
+
+        [TestMethod]
         public void TestCheckNumberRequest()
         {
             var test = new Exercise05();
 
             Assert.AreEqual(test.CheckNumberRequest(153), true);
+            Assert.AreEqual(test.CheckNumberRequest(152), false);
         }
 
         [TestMethod]
-        public void TestShowListNumber()
+        public void TestFindNumbers()
         {
             var test = new Exercise05();
 
-            Assert.AreEqual(test.ShowListNumber(154).Count, 1);
-            Assert.AreEqual(test.ShowListNumber(154)[0], 153);
-            Assert.AreEqual(test.ShowListNumber(10000).Count, 7);
+            Assert.AreEqual(test.FindNumbers(154).Count, 1);
+            Assert.AreEqual(test.FindNumbers(154)[0], 153);
+            Assert.AreEqual(test.FindNumbers(10000).Count, 7);
         }
     }
 }

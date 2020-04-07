@@ -9,19 +9,6 @@ namespace NETPROGRAMTest.BasicExerciseTest
     {
 
         [TestMethod]
-        public void TestIsPrime()
-        {
-            var test = new Exercise03();
-
-            Assert.AreEqual(test.IsPrime(1), false);
-            Assert.AreEqual(test.IsPrime(0), false);
-            Assert.AreEqual(test.IsPrime(3), true);
-            Assert.AreEqual(test.IsPrime(5), true);
-            Assert.AreEqual(test.IsPrime(9), false);
-            Assert.AreEqual(test.IsPrime(7), true);
-        }
-
-        [TestMethod]
         public void TestShowMultiPrime()
         {
 

@@ -1,5 +1,6 @@
 ﻿using NETPROGRAM.BasicExercise;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace NETPROGRAMTest.BasicExerciseTest
 {
@@ -12,7 +13,7 @@ namespace NETPROGRAMTest.BasicExerciseTest
         {
             var test = new Exercise08();
 
-            Assert.AreEqual(test.PI(), 3.14139);
+            Assert.AreEqual(Math.Round(test.PI(),5), 3.14139);
         }
 
     }

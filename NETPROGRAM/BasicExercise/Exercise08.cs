@@ -9,16 +9,25 @@ namespace NETPROGRAM.BasicExercise
         {
             var result = 0.0;
             var i = 0;
+            var x = 1.0;
 
-            while (1.0/(2 * i + 1) > E)
+            while (x > E)
             {
-                    
-                result += System.Math.Pow(-1, i) * (1.0 / (2 * i + 1));                         
+                if(i %2 == 0)
+                {
+                    result += x;
+                }
+                else
+                {
+                    result -= x;
+                }
+                                         
                 i++;
+                x = 1.0 / (2 * i + 1);
 
             }
 
-            return System.Math.Round(4.0 * result,5);
+            return 4.0 * result;
         }
     }
 }

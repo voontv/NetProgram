@@ -6,15 +6,6 @@ namespace NETPROGRAMTest.BasicExerciseTest
     [TestClass]
     public class Exercise12Test
     {
-        [TestMethod]
-        public void TestPowInt()
-        {
-            var test = new Exercise12();
-
-            Assert.AreEqual(test.PowInt(2, 3), 8);
-            Assert.AreEqual(test.PowInt(3, 3), 27);
-            Assert.AreEqual(test.PowInt(10, 4), 10000);
-        }
 
         [TestMethod]
         public void TestSymmetryNumber()

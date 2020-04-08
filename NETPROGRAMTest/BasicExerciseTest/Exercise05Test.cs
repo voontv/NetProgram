@@ -24,8 +24,8 @@ namespace NETPROGRAMTest.BasicExerciseTest
         {
             var test = new Exercise05();
 
-            Assert.AreEqual(test.CheckNumberRequest(153), true);
-            Assert.AreEqual(test.CheckNumberRequest(152), false);
+            Assert.AreEqual(test.IsValid(153), true);
+            Assert.AreEqual(test.IsValid(152), false);
         }
 
         [TestMethod]

@@ -7,24 +7,24 @@ namespace NETPROGRAM.BasicExercise
     public class Exercise05
     {
 
-        public int PowInt(int number, int index)
+        public int PowInt(int m, int n)
         {
-            if(index == 0)
+            if(n == 0)
             {
                 return 1;
             }
 
             var pow = 1;
 
-            for(int i = 1; i<= index; i++)
+            for(int i = 1; i<= n; i++)
             {
-                pow *= number;
+                pow *= m;
             }
 
             return pow;
         }
    
-        public bool CheckNumberRequest(int n)
+        public bool IsValid(int n)
         {
             int length = n.ToString().Length;
             int result = 0;
@@ -45,7 +45,7 @@ namespace NETPROGRAM.BasicExercise
         public List<int> FindNumbers(int n)
         {
 
-            return Enumerable.Range(100, n-100).Where(s => CheckNumberRequest(s)).ToList();
+            return Enumerable.Range(100, n-100).Where(s => IsValid(s)).ToList();
         }
     }
 }

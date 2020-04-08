@@ -11,7 +11,6 @@ namespace NETPROGRAMTest.BasicExerciseTest
         [TestMethod]
         public void TestShowMultiPrime()
         {
-
             var test = new Exercise03();
 
             Assert.AreEqual(test.ShowMultiPrime(9), "3 * 3");

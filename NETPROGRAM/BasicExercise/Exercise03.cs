@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Collections.Generic;
 
 namespace NETPROGRAM.BasicExercise
 {
@@ -8,8 +9,7 @@ namespace NETPROGRAM.BasicExercise
 
         public String ShowMultiPrime(int n)
         {
-
-            String stringPrime = null;
+            var stringPrime = new List<int>();
             var i = 2;
 
             if(n <= i)
@@ -21,14 +21,7 @@ namespace NETPROGRAM.BasicExercise
             {
                 if (n % i == 0)
                 {
-                    if (stringPrime != null)
-                    {
-                        stringPrime += " * " + i;
-                    }
-                    else
-                    {
-                        stringPrime += i;
-                    }
+                    stringPrime.Add(i);
                     n /= i;
                 }
                 else
@@ -37,7 +30,7 @@ namespace NETPROGRAM.BasicExercise
                 }
             } while (i <= n);
 
-            return stringPrime;
+            return string.Join(" * ",stringPrime);
         }
     }
 }

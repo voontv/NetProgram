@@ -13,9 +13,9 @@ namespace NETPROGRAMTest.BasicExerciseTest
         {
             var test = new Exercise08();
 
-            Assert.AreEqual(Math.Round(test.PI(),5), 3.14139);
-            Assert.AreEqual(Math.Round(test.PI(),6), 3.141393);
-            Assert.AreEqual(Math.Round(test.PI(),7), 3.1413927);
+            Assert.AreEqual(test.PI(), 3.14146, 0.0001);
+            Assert.AreEqual(test.PI(), 3.14139, 0.0001);
+            Assert.AreEqual(test.PI(), 3.1413, 0.0001);
         }
 
     }

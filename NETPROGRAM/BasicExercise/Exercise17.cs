@@ -8,7 +8,6 @@ namespace NETPROGRAM.BasicExercise
 {
     public class Exercise17
     {
-        public const int MaxValue = 2147483647;
 
         public bool IsPrime(int n)
         {

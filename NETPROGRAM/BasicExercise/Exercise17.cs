@@ -46,16 +46,9 @@ namespace NETPROGRAM.BasicExercise
         {
             var m = n;
 
-            while( m>= n)
+            while(!(IsPrime(m) && IsSymmetric(m)))
             {
-                if(IsPrime(m) && IsSymmetric(m))
-                {
-                    break;
-                }
-                else
-                {
-                    m++;
-                }
+                m++;        
             }
             return m;
         }

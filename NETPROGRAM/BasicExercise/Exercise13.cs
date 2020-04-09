@@ -60,7 +60,7 @@ namespace NETPROGRAM.BasicExercise
                                     var lengthC = stringC.Length;
                                     if (CheckStringIp(stringA, stringB, stringC, stringD))
                                     {
-                                        listIP.Add(stringA+"."+stringB+"."+stringC+"."+stringD);         
+                                        listIP.Add($"{stringA}.{stringB}.{stringC}.{stringD}");         
                                     }
                                   
                                 }

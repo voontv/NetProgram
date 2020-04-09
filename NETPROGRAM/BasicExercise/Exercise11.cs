@@ -33,14 +33,14 @@ namespace NETPROGRAM.BasicExercise
             }
 
             var number = 0;
-            var length = LengthBinaryNumber(n);
             var i = 1;
 
             while (n > 0)
             {
-                number += (n % 2) << (length - i);
-                n /= 2;
-                i++;
+               
+                number = (number << 1) | (n & 1);
+                n >>= 1;
+
             }
 
             return number;

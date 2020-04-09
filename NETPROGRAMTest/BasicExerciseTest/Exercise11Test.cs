@@ -22,9 +22,9 @@ namespace NETPROGRAMTest.BasicExerciseTest
         {
             var test = new Exercise11();
 
-            Assert.AreEqual(test.BinaryNumberReverse(8), 1);
-            Assert.AreEqual(test.BinaryNumberReverse(0), 0);
-            Assert.AreEqual(test.BinaryNumberReverse(7), 7);
+            Assert.AreEqual(test.BinaryNumberReverse(10), 5);
+            Assert.AreEqual(test.BinaryNumberReverse(121), 79);
+            Assert.AreEqual(test.BinaryNumberReverse(71), 113);
         }
     }
 }

@@ -6,24 +6,6 @@ namespace NETPROGRAM.BasicExercise
     public class Exercise11
     {
 
-        public int LengthBinaryNumber(int n)
-        {
-            if (n == 0)
-            {
-                return 1;
-            }
-
-            var length = 0;
-
-            while (n > 0)
-            {
-                length += 1;
-                n /= 2;
-            }
-
-            return length;
-        }
-
         public int BinaryNumberReverse(int n)
         {
             

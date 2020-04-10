@@ -34,28 +34,24 @@ namespace NETPROGRAM.BasicExercise
             return Enumerable.Range(2, n - 1).Where(x => IsPrime(x) && x > minInRange).ToList(); ;
         }
 
-        public int FindNumber()
+        public bool FindNumber(int number)
         {
-            var n = 2 * 3 * 5;
             var minRange = 7;
-            var isCorrect = true;
 
-            do
+            if(number % (2 * 3 * 5) != 0)
             {
+                return false;
+            }
 
-                foreach (int i in RangesPrime(n, minRange))
+            foreach (int i in RangesPrime(number, minRange))
+            {
+                if(number % i == 0)
                 {
-                    if(n % i == 0)
-                    {
-                        isCorrect = false;
-                        minRange = n;
-                        n += 2 * 3 * 5;
-                        break;
-                    }
+                    return false;
                 }
-            } while (!isCorrect);
+            }
 
-            return n;
+            return true;
         }
     }
 }

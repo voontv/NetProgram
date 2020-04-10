@@ -42,7 +42,12 @@ namespace NETPROGRAMTest.BasicExerciseTest
         {
             var test = new Exercise16();
 
-            Assert.AreEqual(test.FindNumber(), 30);
+            Assert.AreEqual(test.FindNumber(30), true);
+            Assert.AreEqual(test.FindNumber(60), true);
+            Assert.AreEqual(test.FindNumber(90), true);
+            Assert.AreEqual(test.FindNumber(901), false);
+            Assert.AreEqual(test.FindNumber(2324), false);
+            Assert.AreEqual(test.FindNumber(15), false);
         }
     }
 }

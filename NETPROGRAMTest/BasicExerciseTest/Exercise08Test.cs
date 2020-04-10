@@ -13,9 +13,7 @@ namespace NETPROGRAMTest.BasicExerciseTest
         {
             var test = new Exercise08();
 
-            Assert.AreEqual(test.PI(), 3.14146, 0.0001);
-            Assert.AreEqual(test.PI(), 3.14139, 0.0001);
-            Assert.AreEqual(test.PI(), 3.1413, 0.0001);
+            Assert.AreEqual(test.PI(), 3.14159, 0.0001);
         }
 
     }

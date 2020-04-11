@@ -9,9 +9,8 @@ namespace NETPROGRAM.BasicExercise
             var sum = 0;
             sum =10 * sum + (n % 10);
             n /= 10;
-        }
-
-            return (sum == temp);
+        
+            return (sum == 0);
         }
     }
 }

@@ -14,7 +14,7 @@ namespace NETPROGRAM.BasicExercise
 
             foreach(String s in stringIp)
             {
-                if (!Int32.TryParse(s, out int x) || !(Int32.Parse(s) >= 0 && Int32.Parse(s) <= 255))
+                if (!int.TryParse(s, out int x) || !(x >= 0 && x <= 255))
                 {
                     return false;
                 }
@@ -24,15 +24,14 @@ namespace NETPROGRAM.BasicExercise
             return true;
         }
 
-        public List<string> FindRangeIP(string stringIp)
+        public bool FindRangeIP(string stringIp)
         {
 
             if(stringIp.Length < 4 || stringIp.Length > 12)
             {
-                throw new Exception("Ip address is wrong.");
-            }
 
-            var listIP =  new List<String>();
+                return false;
+            }
             
             for(int i =0; i<3; i++)
             {
@@ -46,7 +45,6 @@ namespace NETPROGRAM.BasicExercise
 
                         if (stringIp.Substring(j+1).Length >= 2 && stringIp.Substring(j+1).Length <= 6)
                         {
-                            var lengthA = stringA.Length;
                             var stringB = stringIp.Substring(i + 1, j - i); 
 
                             for (int k = j + 1; k < j + 1 + 3; k++)
@@ -55,35 +53,22 @@ namespace NETPROGRAM.BasicExercise
                                 if (stringIp.Substring(k+1).Length >= 1 && stringIp.Substring(k+1).Length <= 3)
                                 {
                                     var stringC = stringIp.Substring(j + 1, k - j);
-                                    var lengthB = stringB.Length;
                                     var stringD = stringIp.Substring(k + 1);
-                                    var lengthC = stringC.Length;
+
                                     if (CheckStringIp(stringA, stringB, stringC, stringD))
                                     {
-                                        listIP.Add($"{stringA}.{stringB}.{stringC}.{stringD}");         
+                                        return true;         
                                     }
                                   
                                 }
-                                else
-                                {
-                                    break;
-                                }
                             }
-                        }
-                        else
-                        {
-                            break;
-                        }
+                        }             
                     }
-                }
-                else
-                {
-                    break;
-                }
+                }            
 
             }
 
-            return listIP;
+            return false;
 
         }
     }

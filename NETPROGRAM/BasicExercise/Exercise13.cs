@@ -25,13 +25,7 @@ namespace NETPROGRAM.BasicExercise
         }
 
         public bool FindRangeIP(string stringIp)
-        {
-
-            if(stringIp.Length < 4 || stringIp.Length > 12)
-            {
-
-                return false;
-            }
+        {     
             
             for(int i =0; i<3; i++)
             {

@@ -8,11 +8,62 @@ namespace NETPROGRAM.BasicExercise
 {
     public class Exercise14
     {
-        
-        public int CountNumberZero(int n)
-        {
 
-            return Enumerable.Range(0, n + 1).Sum(b => (b % 10 == 0) ? (b.ToString().Length - 1) : ((b % 5 == 0) ? 1 : 0));
+        public long PowInt(int m, int n)
+        {
+            if (n == 0)
+            {
+                return 1;
+            }
+
+            long multi = 1;
+
+            for (int i = 0; i < n; i++)
+            {
+                multi *= m;
+            }
+
+            return multi;
+        }
+
+        public int CountZeroFactorial(int n)
+        {
+            var count = 0;
+
+            for (int i = 1; i <= n; i++)
+            {
+                if (i % 10 == 0)
+                {
+                    for (int j = i.ToString().Length - 1; j >= 0; j--)
+                    {
+                        if (i % PowInt(10, j) == 0)
+                        {
+                            if (i % (5 * PowInt(10, j)) == 0)
+                            {
+                                count += j + 1;
+                            }
+                            else
+                            {
+                                count += j;
+                            }
+                            break;
+                        }
+                    }
+                }
+                else if (i % 5 == 0)
+                {
+                    if ((i - 25) % 100 == 0)
+                    {
+                        count += 2;
+                    }
+                    else
+                    {
+                        count += 1;
+                    }
+                }
+            }
+
+            return count;
         }
     }
 }

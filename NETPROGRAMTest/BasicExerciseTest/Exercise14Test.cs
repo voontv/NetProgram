@@ -13,16 +13,25 @@ namespace NETPROGRAMTest.BasicExerciseTest
     {
 
         [TestMethod]
-        public void TestCountNumberZero()
+        public void TestPowInt()
         {
             var test = new Exercise14();
 
-            Assert.AreEqual(test.CountNumberZero(10), 2);
-            Assert.AreEqual(test.CountNumberZero(4), 0);
-            Assert.AreEqual(test.CountNumberZero(100), 21);
-            Assert.AreEqual(test.CountNumberZero(14), 2);
-            Assert.AreEqual(test.CountNumberZero(15), 3);
-            Assert.AreEqual(test.CountNumberZero(20), 4);        
+            Assert.AreEqual(test.PowInt(2, 3), 8);
+            Assert.AreEqual(test.PowInt(4, 4), 256);
+        }
+
+        [TestMethod]
+        public void TestCountZeroFactorial()
+        {
+            var test = new Exercise14();
+
+            Assert.AreEqual(test.CountZeroFactorial(8), 1);
+            Assert.AreEqual(test.CountZeroFactorial(15), 3);
+            Assert.AreEqual(test.CountZeroFactorial(25), 6);
+            Assert.AreEqual(test.CountZeroFactorial(100), 23);
+            Assert.AreEqual(test.CountZeroFactorial(400), 92);
+            Assert.AreEqual(test.CountZeroFactorial(450), 104);
         }
     }
 }

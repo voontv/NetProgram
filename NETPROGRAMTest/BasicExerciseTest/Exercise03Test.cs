@@ -17,8 +17,6 @@ namespace NETPROGRAMTest.BasicExerciseTest
             Assert.AreEqual(test.ShowMultiPrime(12), "2 * 2 * 3");
             Assert.AreEqual(test.ShowMultiPrime(7), "7");
             Assert.AreEqual(test.ShowMultiPrime(33), "3 * 11");
-            Assert.AreEqual(test.ShowMultiPrime(1), "1");
-            Assert.AreEqual(test.ShowMultiPrime(0), "0");
         }
     }
 

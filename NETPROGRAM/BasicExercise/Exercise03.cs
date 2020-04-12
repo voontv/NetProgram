@@ -14,7 +14,7 @@ namespace NETPROGRAM.BasicExercise
 
             if(n <= i)
             {
-                return n.ToString();
+                throw new Exception("Input wrong");
             }
 
             do

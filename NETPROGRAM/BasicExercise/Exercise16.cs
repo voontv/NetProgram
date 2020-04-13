@@ -17,7 +17,7 @@ namespace NETPROGRAM.BasicExercise
                 return false;
             }
 
-            for(int i = 2; i <= n / 2; i++)
+            for(var i = 2; i <= n / i; i++)
             {
                 if(n % i == 0)
                 {
@@ -31,19 +31,19 @@ namespace NETPROGRAM.BasicExercise
         public List<int> RangesPrime(int n,int minInRange = 0)
         {
 
-            return Enumerable.Range(2, n - 1).Where(x => IsPrime(x) && x > minInRange).ToList(); ;
+            return Enumerable.Range(minInRange + 1, n - minInRange + 1).Where(x => IsPrime(x)).ToList(); ;
         }
 
-        public bool FindNumber(int number)
+        public bool CheckNumber(int number)
         {
-            var minRange = 7;
+            var minRange = 5;
 
-            if(number % (2 * 3 * 5) != 0)
+            if(number % (3 * 5) != 0)
             {
                 return false;
             }
 
-            foreach (int i in RangesPrime(number, minRange))
+            foreach (var i in RangesPrime(number, minRange))
             {
                 if(number % i == 0)
                 {

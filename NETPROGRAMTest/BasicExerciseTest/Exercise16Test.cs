@@ -19,9 +19,10 @@ namespace NETPROGRAMTest.BasicExerciseTest
             var test = new Exercise16();
 
             Assert.AreEqual(test.IsPrime(4), false);
-            Assert.AreEqual(test.IsPrime(145), false);
+            Assert.AreEqual(test.IsPrime(7), true);
             Assert.AreEqual(test.IsPrime(232243), false);
             Assert.AreEqual(test.IsPrime(13), true);
+            Assert.AreEqual(test.IsPrime(2), true);
             Assert.AreEqual(test.IsPrime(113), true);
         }
 
@@ -42,12 +43,12 @@ namespace NETPROGRAMTest.BasicExerciseTest
         {
             var test = new Exercise16();
 
-            Assert.AreEqual(test.FindNumber(30), true);
-            Assert.AreEqual(test.FindNumber(60), true);
-            Assert.AreEqual(test.FindNumber(90), true);
-            Assert.AreEqual(test.FindNumber(901), false);
-            Assert.AreEqual(test.FindNumber(2324), false);
-            Assert.AreEqual(test.FindNumber(15), false);
+            Assert.AreEqual(test.CheckNumber(30), true);
+            Assert.AreEqual(test.CheckNumber(60), true);
+            Assert.AreEqual(test.CheckNumber(90), true);
+            Assert.AreEqual(test.CheckNumber(901), false);
+            Assert.AreEqual(test.CheckNumber(2324), false);
+            Assert.AreEqual(test.CheckNumber(15), true);
         }
     }
 }

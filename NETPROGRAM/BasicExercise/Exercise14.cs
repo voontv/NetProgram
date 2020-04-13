@@ -8,25 +8,22 @@ namespace NETPROGRAM.BasicExercise
 {
     public class Exercise14
     {
-
-      
+ 
         public int CountZeroFactorial(int n)
         {
             var count = 0;
 
             for (var i = 5; i <= n; i += 5)
             {
+                var number = i;
 
-                if (i % 5 == 0)
+                do
                 {
-                    var number = i;
-                    do
-                    {
-                        number /= 5;
-                        count++;
-                    } while (number % 5 == 0);
-                }
-                
+
+                    number /= 5;
+                    count++;
+
+                } while(number % 5 == 0);      
             }
 
             return count;

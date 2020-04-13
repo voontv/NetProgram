@@ -51,12 +51,15 @@
   <ItemGroup>
     <Compile Include="BasicExerciseTest\Exercise01Test.cs" />
     <Compile Include="BasicExerciseTest\Exercise02Test.cs" />
+    <Compile Include="BasicExerciseTest\Exercise03Test.cs" />
     <Compile Include="BasicExerciseTest\Exercise08Test.cs" />
     <Compile Include="BasicExerciseTest\Exercise11Test.cs" />
     <Compile Include="BasicExerciseTest\Exercise05Test.cs" />
     <Compile Include="BasicExerciseTest\Exercise12Test.cs" />
+    <Compile Include="BasicExerciseTest\Exercise13Test.cs" />
     <Compile Include="BasicExerciseTest\Exercise04Test.cs" />
     <Compile Include="BasicExerciseTest\Exercise15Test.cs" />
+    <Compile Include="BasicExerciseTest\Exercise17Test.cs" />
     <Compile Include="BasicExerciseTest\Exercise18Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

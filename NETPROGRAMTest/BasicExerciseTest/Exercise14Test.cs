@@ -13,15 +13,6 @@ namespace NETPROGRAMTest.BasicExerciseTest
     {
 
         [TestMethod]
-        public void TestPowInt()
-        {
-            var test = new Exercise14();
-
-            Assert.AreEqual(test.PowInt(2, 3), 8);
-            Assert.AreEqual(test.PowInt(4, 4), 256);
-        }
-
-        [TestMethod]
         public void TestCountZeroFactorial()
         {
             var test = new Exercise14();
@@ -29,9 +20,10 @@ namespace NETPROGRAMTest.BasicExerciseTest
             Assert.AreEqual(test.CountZeroFactorial(8), 1);
             Assert.AreEqual(test.CountZeroFactorial(15), 3);
             Assert.AreEqual(test.CountZeroFactorial(25), 6);
-            Assert.AreEqual(test.CountZeroFactorial(100), 23);
-            Assert.AreEqual(test.CountZeroFactorial(400), 92);
-            Assert.AreEqual(test.CountZeroFactorial(450), 104);
+            Assert.AreEqual(test.CountZeroFactorial(30), 7);
+            Assert.AreEqual(test.CountZeroFactorial(100), 24);
+            Assert.AreEqual(test.CountZeroFactorial(400), 99);
+            Assert.AreEqual(test.CountZeroFactorial(450), 111);
         }
     }
 }

@@ -14,7 +14,7 @@ namespace NETPROGRAM.BasicExercise
         {
             var count = 0;
 
-            for (var i = 0; i <= n; i += 5)
+            for (var i = 5; i <= n; i += 5)
             {
 
                 if (i % 5 == 0)

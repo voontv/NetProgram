@@ -17,7 +17,7 @@ namespace NETPROGRAM.BasicExercise
                 return false;
             }
 
-            for(int i = 2; i < n/i; i++)
+            for(var i = 2; i < n/i; i++)
             {
                 if(n % i == 0)
                 {
@@ -44,13 +44,12 @@ namespace NETPROGRAM.BasicExercise
 
         public int FindNumbers(int n)
         {
-            var m = n;
-
-            while(!(IsPrime(m) && IsSymmetric(m)))
+            
+            while(!(IsSymmetric(n) && IsPrime(n)))
             {
-                m++;        
+                n++;        
             }
-            return m;
+            return n;
         }
     }
 }

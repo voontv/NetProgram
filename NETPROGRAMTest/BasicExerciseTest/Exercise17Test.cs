@@ -30,12 +30,12 @@ namespace NETPROGRAMTest.BasicExerciseTest
         {
             var test = new Exercise17();
 
-            Assert.AreEqual(test.IsSymmetric(9), true);
-            Assert.AreEqual(test.IsSymmetric(1234321), true);
-            Assert.AreEqual(test.IsSymmetric(121), true);
-            Assert.AreEqual(test.IsSymmetric(1231), false);
-            Assert.AreEqual(test.IsSymmetric(234435453), false);
-            Assert.AreEqual(test.IsSymmetric(87874), false);
+            Assert.IsTrue(test.IsSymmetric(9));
+            Assert.IsTrue(test.IsSymmetric(1234321));
+            Assert.IsTrue(test.IsSymmetric(121));
+            Assert.IsFalse(test.IsSymmetric(1231));
+            Assert.IsFalse(test.IsSymmetric(234435453));
+            Assert.IsFalse(test.IsSymmetric(87874));
         }
 
         [TestMethod]

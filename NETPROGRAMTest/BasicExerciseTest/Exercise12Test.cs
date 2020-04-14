@@ -6,7 +6,7 @@ namespace NETPROGRAMTest.BasicExerciseTest
     [TestClass]
     public class Exercise12Test
     {
-
+      
         [TestMethod]
         public void TestSymmetryNumber()
         {

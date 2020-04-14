@@ -4,18 +4,18 @@ namespace NETPROGRAM.BasicExercise
     public class Exercise12
     {
   
-        public bool SymmetryNumber(int n)
+        public bool SymmetryNumber(int number)
         {
             var sum = 0;
-            var temp = n;
+            var n = number;
 
-            while(n != 0)
+            while(n > 0)
             {
-                sum =10 * sum + (n % 10);
+                sum = 10 * sum + (n % 10);
                 n /= 10;
-            }
-
-            return (sum == temp);
+            }           
+        
+            return (sum == number);
         }
     }
 }

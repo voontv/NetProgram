@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArrayExercise\ArrayDemo.cs" />
+    <Compile Include="ArrayExercise\Exercise03.cs" />
     <Compile Include="BasicExercise\Exercise03.cs" />
     <Compile Include="BasicExercise\Exercise01.cs" />
     <Compile Include="BasicExercise\Exercise02.cs" />

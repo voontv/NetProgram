@@ -28,24 +28,22 @@ namespace NETPROGRAM.BasicExercise
             return true;
         }
 
-        public List<int> RangesPrime(int n,int minInRange = 0)
+        public List<int> RangesPrime(int n)
         {
 
-            return Enumerable.Range(minInRange + 1, n - minInRange + 1).Where(x => IsPrime(x)).ToList(); ;
+            return Enumerable.Range(1, n + 1).Where(x => IsPrime(x)).ToList(); ;
         }
 
         public bool CheckNumber(int number)
         {
-            var minRange = 5;
-
-            if(number % (3 * 5) != 0)
+            if(number < 2)
             {
                 return false;
             }
 
-            foreach (var i in RangesPrime(number, minRange))
+            foreach (var i in RangesPrime(number))
             {
-                if(number % i == 0)
+                if(number % i == 0 && i > 5)
                 {
                     return false;
                 }

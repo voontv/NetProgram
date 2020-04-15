@@ -11,11 +11,10 @@ namespace NETPROGRAM.ArrayExercise
 
         public int SumMax(int[] array)
         {
-            var numbers = (from n in array
-                          orderby n descending
-                          select n).ToArray();
 
-            return Enumerable.Range(0,(numbers.Length >= 3) ? 3 : numbers.Length).Sum(x => numbers[x]);
+            return (from n in array
+                    orderby n descending
+                    select n).Take(3).Sum(x => x);
         }
     }
 }

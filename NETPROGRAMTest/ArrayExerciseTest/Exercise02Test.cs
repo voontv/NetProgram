@@ -20,6 +20,7 @@ namespace NETPROGRAMTest.ArrayExerciseTest
 
             Assert.AreEqual(test.SumMax(new int[] { 4, 5, 19, 20, 3, 11, 18, 21, 9 }), 60);
             Assert.AreEqual(test.SumMax(new int[] { 4, 5 }), 9);
+            Assert.AreEqual(test.SumMax(new int[] { 4 }), 4);
         }
     }
 }

@@ -10,34 +10,12 @@ namespace NETPROGRAM.ArrayExercise
 
         public List<int> CorrectNumbers(int[] array)
         {
-            var arrayOrder = (from n in array
-                             orderby n
-                             select n).ToArray();
-            var listNumbers = new List<int>();
-            var count = 1;
-            var i = 0;
-
-            do
-            {
-                if(arrayOrder[i] == arrayOrder[i+1])
-                {
-                    count++;    
-                }
-                else
-                {
-                    count = 1;
-                }
-
-                if(count == 2)
-                {
-                    listNumbers.Add(arrayOrder[i]);
-                }
-
-                i++;
-
-            } while (i < arrayOrder.Length - 1);
-
-            return listNumbers;
+            
+            return (from i in (from n in array  
+                               group n
+                               by n)
+                   where (i.Count() >= 2)
+                   select i.Key).ToList();
         }
     }
 }

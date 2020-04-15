@@ -30,7 +30,7 @@ namespace NETPROGRAM.ArrayExercise
         public int SumIPrime(int[] array)
         {
 
-            return array.Sum(x => IsPrime(x) ? x : 0);
+            return array.Where(IsPrime).Sum();
         }
     }
 }

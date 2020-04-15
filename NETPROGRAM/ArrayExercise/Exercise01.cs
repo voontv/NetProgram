@@ -13,9 +13,10 @@ namespace NETPROGRAM.ArrayExercise
             
             return (from i in (from n in array  
                                group n
-                               by n)
-                   where (i.Count() >= 2)
-                   select i.Key).ToList();
+                               by n into gr
+                               where (gr.Count() >= 3)
+                               select gr.Key)
+                    select i).ToList();
         }
     }
 }

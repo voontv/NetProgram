@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArrayExercise\ArrayDemo.cs" />
+    <Compile Include="ArrayExercise\Exercise02.cs" />
     <Compile Include="ArrayExercise\Exercise03.cs" />
     <Compile Include="BasicExercise\Exercise03.cs" />
     <Compile Include="BasicExercise\Exercise01.cs" />
@@ -52,6 +53,7 @@
     <Compile Include="BasicExercise\Exercise12.cs" />
     <Compile Include="BasicExercise\Exercise13.cs" />
     <Compile Include="BasicExercise\Exercise04.cs" />
+    <Compile Include="BasicExercise\Exercise15.cs" />
     <Compile Include="BasicExercise\Exercise17.cs" />
     <Compile Include="BasicExercise\Exercise18.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

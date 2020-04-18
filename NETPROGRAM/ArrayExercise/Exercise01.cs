@@ -11,12 +11,11 @@ namespace NETPROGRAM.ArrayExercise
         public List<int> CorrectNumbers(int[] array)
         {
             
-            return (from i in (from n in array  
+            return (from n in array  
                                group n
                                by n into gr
                                where (gr.Count() >= 3)
-                               select gr.Key)
-                    select i).ToList();
+                               select gr.Key).ToList();
         }
     }
 }

@@ -54,6 +54,7 @@
     <Compile Include="ArrayExerciseTest\Exercise02Test.cs" />
     <Compile Include="ArrayExerciseTest\Exercise03Test.cs" />
     <Compile Include="ArrayExerciseTest\Exercise04Test.cs" />
+    <Compile Include="ArrayExerciseTest\Exercise10Test.cs" />
     <Compile Include="BasicExerciseTest\Exercise01Test.cs" />
     <Compile Include="BasicExerciseTest\Exercise02Test.cs" />
     <Compile Include="BasicExerciseTest\Exercise03Test.cs" />

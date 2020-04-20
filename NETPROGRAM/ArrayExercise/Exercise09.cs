@@ -11,25 +11,8 @@ namespace NETPROGRAM.ArrayExercise
 
         public int[] CreatedArray(int n)
         {
-            var random = new Random();
-            var array = new int[n];
 
-            array[0] = random.Next(0, n);
-            for(var i = 1; i < n; i++)
-            {
-                array[i] = random.Next(0, n);
-
-                for (var j = 0; j < i; j++)
-                {
-                    if(array[j] == array[i])
-                    {
-                        i--;
-                        break;
-                    }
-                }
-            }
-
-            return array;
+            return Enumerable.Range(0, n).ToArray();
         }
     }
 }

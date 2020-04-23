@@ -12,7 +12,7 @@ namespace NETPROGRAM.ArrayExercise
         public int[] CreatedArray(int n)
         {
 
-            return Enumerable.Range(0, n).ToArray();
+            return Enumerable.Range(0, n).OrderBy(x => Guid.NewGuid()).ToArray();
         }
     }
 }

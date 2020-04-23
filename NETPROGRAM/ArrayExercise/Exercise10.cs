@@ -12,7 +12,7 @@ namespace NETPROGRAM.ArrayExercise
         public bool IsSquareNumber(int n)
         {
 
-            for(var i = 1; i<= n; i++)
+            for(var i = 1; i * i <= n; i++)
             {
                 if(i * i > n)
                 {

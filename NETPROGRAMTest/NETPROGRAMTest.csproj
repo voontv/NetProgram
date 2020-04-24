@@ -67,6 +67,7 @@
     <Compile Include="BasicExerciseTest\Exercise17Test.cs" />
     <Compile Include="BasicExerciseTest\Exercise18Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="String_ExerciseTest\LengStringTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

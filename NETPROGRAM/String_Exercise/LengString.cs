@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NETPROGRAM.StringExercise
+namespace NETPROGRAM.String_Exercise
 {
-    public class Test
+    public class LengString
     {
-        public int CountLengthString(String s)
-        {
 
+        public int LengOneString(String s)
+        {
             return s.Length;
         }
     }

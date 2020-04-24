@@ -12,9 +12,7 @@ namespace NETPROGRAM.ArrayExercise
         public int CountNumbers(int[] array)
         {
 
-            return (from i in array
-                   where (i % 3 == 0 && i % 5 != 0)
-                   select i).Count();
+            return array.Count(i => i % 3 == 0 && i % 5 != 0);
         }
     }
 }

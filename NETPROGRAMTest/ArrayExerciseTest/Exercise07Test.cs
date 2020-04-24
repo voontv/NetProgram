@@ -17,17 +17,17 @@ namespace NETPROGRAMTest.ArrayExerciseTest
         {
             var test = new Exercise07();
 
-            Assert.AreEqual(test.SplitArray(new int[] { 4, 5, 7, 9, 12, 18, 20, 4, 9 }, 2).Length,5);
+            Assert.AreEqual(test.SplitArray(new int[] { 4, 5, 7, 9, 12, 18, 20, 4, 9 }, 2).Length, 5);
             Assert.AreEqual(test.SplitArray(new int[] { 4, 5, 7, 9, 12, 18, 20, 4, 9 }, 2).ElementAt(4).ElementAt(0), 9);
             Assert.AreEqual(test.SplitArray(new int[] { 16, 5, 17, 9, 762, 18, 20, 4, 9, 20 }, 3).Length, 4);
-            //Assert.AreEqual(test.SplitArray(new [] { 16, 5, 17, 9, 762, 18, 20, 4, 9, 20 }, 3),
-            //    new [] {
-            //        new []{16, 5, 17},
-            //        new []{9, 762, 18},
-            //        new []{20, 4, 9},
-            //        new []{20},
-            //    });
-                
+            Array.Equals(test.SplitArray(new int[] { 16, 5, 17, 9, 762, 18, 20, 4, 9, 20 }, 3),
+                new[] {
+                    new []{16, 5, 17},
+                    new []{9, 762, 18},
+                    new []{20, 4, 9},
+                    new []{20},
+                });
+
         }
     }
 }

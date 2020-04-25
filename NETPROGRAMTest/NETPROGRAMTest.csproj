@@ -50,7 +50,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArrayExerciseTest\ArrayDemoTest.cs" />
+    <Compile Include="ArrayExerciseTest\Exercise01Test.cs" />
+    <Compile Include="ArrayExerciseTest\Exercise02Test.cs" />
     <Compile Include="ArrayExerciseTest\Exercise03Test.cs" />
+    <Compile Include="ArrayExerciseTest\Exercise04Test.cs" />
+    <Compile Include="ArrayExerciseTest\Exercise09Test.cs" />
     <Compile Include="BasicExerciseTest\Exercise01Test.cs" />
     <Compile Include="BasicExerciseTest\Exercise02Test.cs" />
     <Compile Include="BasicExerciseTest\Exercise03Test.cs" />
@@ -61,10 +65,12 @@
     <Compile Include="BasicExerciseTest\Exercise13Test.cs" />
     <Compile Include="BasicExerciseTest\Exercise04Test.cs" />
     <Compile Include="BasicExerciseTest\Exercise16Test.cs" />
+    <Compile Include="BasicExerciseTest\Exercise14Test.cs" />
     <Compile Include="BasicExerciseTest\Exercise15Test.cs" />
     <Compile Include="BasicExerciseTest\Exercise17Test.cs" />
     <Compile Include="BasicExerciseTest\Exercise18Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="String_ExerciseTest\LengStringTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

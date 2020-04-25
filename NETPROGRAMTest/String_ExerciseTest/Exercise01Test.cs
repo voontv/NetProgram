@@ -20,6 +20,7 @@ namespace NETPROGRAMTest.String_ExerciseTest
 
             Assert.AreEqual(test.SnakeCase("myProgram"), "my_program");
             Assert.AreEqual(test.SnakeCase("myProgramGood"), "my_program_good");
+            Assert.AreEqual(test.SnakeCase("MatthewWestHelloMyNameIsLyrics"), "matthew_west_hello_my_name_is_lyrics");
         }
         
     }

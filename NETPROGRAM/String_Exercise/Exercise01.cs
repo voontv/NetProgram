@@ -11,18 +11,17 @@ namespace NETPROGRAM.String_Exercise
 
         public string SnakeCase(string s)
         {
-            var snakeString = s.ToLower();
-            for(var i = s.Length - 2 ; i > 0 ; i--)
+        
+            for(var i = s.Length - 1 ; i > 0 ; i--)
             {
 
-                if (s.ToLower()[i] - s[i] > 0)
+                if (Char.IsUpper(s[i]))
                 {
-                    snakeString = snakeString.Insert(i, "_");
+                    s = s.Insert(i, "_");
                 }
             }
 
-            return snakeString;
-            
+            return s.ToLower();           
         }
     }
 }

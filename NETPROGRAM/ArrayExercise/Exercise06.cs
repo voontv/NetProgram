@@ -13,40 +13,24 @@ namespace NETPROGRAM.ArrayExercise
         {
             var left = 0;
             var right = array.Length - 1;
-            var mid = -1;
-            var arrayToUp = true;
-
-            if (array[right] < array[left])
-            {
-                arrayToUp = false;
-                Array.Reverse(array);
-            }
-
-            while (right != left)
+            var mid = 0;
+            
+            while (array[mid] != number && left != right)
             {
                 mid = (left + right) / 2;
 
-                if(number == array[mid])
-                {
-                    return arrayToUp ? mid : array.Length - 1 - mid;
-                }
-                else if (number < array[mid])
+                if (number < array[mid])
                 {
                      right = mid - 1;                    
                 }
                 else
                 {
                     left = mid + 1;
-                }
-                   
-                if(right == left)
-                {
-                    return (number == array[left]) ? (arrayToUp ? mid : array.Length - 1 - right) : -1; 
-                }
+                }             
             }
             
            
-            return mid;
+            return (array[mid] == number) ? mid : -1;
         }
     }
 }

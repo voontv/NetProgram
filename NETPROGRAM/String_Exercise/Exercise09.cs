@@ -10,10 +10,21 @@ namespace NETPROGRAM.String_Exercise
 
         public bool IsBarcodeEAN13(string s)
         {
+            var sum = 0;
 
-            return (from index in Enumerable.Range(0, s.Length)
-                    group int.Parse(s[index].ToString()) by index % 2)
-                    .Sum(x => (x.Key == 0) ? x.ToArray().Sum() : (3 * x.ToArray().Sum())) % 10 == 0;
+            for (var i = 0; i < s.Length; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    sum += int.Parse(s[i].ToString());
+                }
+                else
+                {
+                    sum += 3 * int.Parse(s[i].ToString());
+                }
+
+            }
+            return sum % 10 == 0;
         }
     }
 }

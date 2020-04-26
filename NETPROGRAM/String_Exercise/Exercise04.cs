@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace NETPROGRAM.String_Exercise
@@ -9,11 +10,11 @@ namespace NETPROGRAM.String_Exercise
     public class Exercise04
     {
 
-        public int PowInt(int n,int m)
+        public int PowInt(int n, int m)
         {
             var mul = 1;
-                      
-            for(var i = 1; i <= m; i++)
+
+            for (var i = 1; i <= m; i++)
             {
                 mul *= n;
             }
@@ -24,18 +25,40 @@ namespace NETPROGRAM.String_Exercise
         public int SumIntInString(string s)
         {
             var sum = 0;
-            var lengInt = 0;
+            var count = 0;
+            s += " ";
 
-            foreach(var ch in s.ToCharArray().Reverse())
+            for (var i = 0; i < s.Length; i++)
             {
-                if (Char.IsDigit(ch))
+                if (Char.IsDigit(s[i]))
                 {
-                    sum += int.Parse(ch.ToString()) * PowInt(10, lengInt);
-                    lengInt++;
+                    for (var j = i + 1; j < s.Length; j++)
+                    {
+                        if (!Char.IsDigit(s[j]))
+                        {
+                            count = j - i;
+                            break;
+                        }
+                    }
+
+                    sum += int.Parse(s.Substring(i, count));
+                    i += count;
+                    count = 0;
                 }
-                else
+            }
+
+            return sum;
+        }
+
+        public int SumIntRegex(string s)
+        {
+            var sum = 0;
+
+            foreach (var index in Regex.Split(s, @"[\D]"))
+            {
+                if (!index.Equals(""))
                 {
-                    lengInt = 0;
+                    sum += int.Parse(index);
                 }
             }
 

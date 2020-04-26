@@ -15,11 +15,11 @@ namespace NETPROGRAM.String_Exercise
             var stringBuilder = new StringBuilder();
             stringBuilder.Append(s[0]);
 
-            for (var i = 1; i < s.Length; i++)
+            foreach (var ch in s.Skip(1))
             {
-                if (stringBuilder.ToString().Last() != s[i])
+                if (stringBuilder[stringBuilder.Length - 1] != ch)
                 {
-                    stringBuilder.Append(s[i]);
+                    stringBuilder.Append(ch);
                 }
             }
 

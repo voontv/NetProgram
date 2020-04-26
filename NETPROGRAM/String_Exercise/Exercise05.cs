@@ -11,18 +11,15 @@ namespace NETPROGRAM.String_Exercise
 
         public bool IsSymmetry(String s)
         {
-            bool isSymmetry = true;
-
-            for(var i =0; i < s.Length/2; i++)
+            for (var i = 0; i < s.Length / 2; i++)
             {
-
-                if(s[i] != s[s.Length - 1 - i])
+                if (s[i] != s[s.Length - 1 - i])
                 {
                     return false;
                 }
             }
 
-            return isSymmetry;
+            return true;
         }
     }
 }

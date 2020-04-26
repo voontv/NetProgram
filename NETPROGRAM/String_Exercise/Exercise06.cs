@@ -21,13 +21,10 @@ namespace NETPROGRAM.String_Exercise
                 {
                     if (s[j] != s[i])
                     {
+                        stringBuilder.Append(s[i].ToString());
                         if (j - i > 1)
                         {
-                            stringBuilder.Append(s[i].ToString() + (j - i).ToString());
-                        }
-                        else
-                        {
-                            stringBuilder.Append(s[i].ToString());
+                            stringBuilder.Append((j - i));
                         }
 
                         i = j;

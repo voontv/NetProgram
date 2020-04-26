@@ -13,6 +13,7 @@ namespace NETPROGRAM.String_Exercise
         public string OptimizeString(string s)
         {
             var stringBuilder = new StringBuilder();
+            s += " ";
 
             for (var i = 0; i < s.Length - 1; i++)
             {
@@ -32,26 +33,6 @@ namespace NETPROGRAM.String_Exercise
                         i = j;
                     }
                 }
-
-                if (s[s.Length - 1] != s[s.Length - 2])
-                {
-                    stringBuilder.Append(s.Last());
-                }
-            }
-
-            return stringBuilder.ToString();
-        }
-
-        public string OptimizeStringRegex(string s)
-        {
-            var stringBuilder = new StringBuilder(s);
-
-            for (var i = 0; i < s.Length; i++)
-            {
-                var count = Regex.Replace(s, s[i] + "*", "").Length - s.Length;
-
-                stringBuilder.Append((count > 1) ? (s[i] + count) : s[i]);
-                i += count - 1;
             }
 
             return stringBuilder.ToString();

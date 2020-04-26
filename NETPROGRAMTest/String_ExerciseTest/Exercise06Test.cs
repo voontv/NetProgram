@@ -12,7 +12,7 @@ namespace NETPROGRAMTest.String_ExerciseTest
     [TestClass]
     public class Exercise06Test
     {
-        
+
         [TestMethod]
         public void TestOptimizeString()
         {
@@ -20,15 +20,7 @@ namespace NETPROGRAMTest.String_ExerciseTest
 
             Assert.AreEqual(test.OptimizeString("abcccceeeeeefd"), "abc4e6fd");
             Assert.AreEqual(test.OptimizeString("abbbbbbbbbbbbbc"), "ab13c");
-        }
-
-        [TestMethod]
-        public void TestOptimizeRegex()
-        {
-            var test = new Exercise06();
-
-            Assert.AreEqual(test.OptimizeString("abcccceeeeeefd"), "abc4e6fd");
-            Assert.AreEqual(test.OptimizeString("abbbbbbbbbbbbbc"), "ab13c");
+            Assert.AreEqual(test.OptimizeString("abbbbbbbbbbbbbcaaa"), "ab13ca3");
         }
     }
 }

@@ -11,15 +11,14 @@ namespace NETPROGRAM.String_Exercise
 
         public string UpperCase(string s)
         {
-            StringBuilder upperString = new StringBuilder();
+            string result = "";
 
-            foreach (var subString in s.Split('_'))
+            foreach (var sub in s.Split('_'))
             {
-                upperString.Append(char.ToUpper(subString[0]));
-                upperString.Append(subString.Substring(1));
+                result = string.Concat(result, Char.ToUpper(sub[0]), sub.Substring(1));
             }
 
-            return upperString.ToString();
+            return result;
         }
     }
 }

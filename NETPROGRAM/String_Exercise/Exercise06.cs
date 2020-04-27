@@ -21,7 +21,7 @@ namespace NETPROGRAM.String_Exercise
                 {
                     if (s[j] != s[i])
                     {
-                        stringBuilder.Append(s[i].ToString());
+                        stringBuilder.Append(s[i]);
                         if (j - i > 1)
                         {
                             stringBuilder.Append((j - i));

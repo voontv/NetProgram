@@ -11,26 +11,28 @@ namespace NETPROGRAM.ArrayExercise
 
         public int PositionInArray(int[] array, int number)
         {
-            var left = 0;
+            var left = -1;
             var right = array.Length - 1;
-            var mid = 0;
-            
-            while (array[mid] != number && left != right)
+
+            while (left <= right)
             {
-                mid = (left + right) / 2;
+                var mid = left + (right - left) / 2;
+                if (array[mid] == number)
+                {
+                    return mid;
+                }
 
                 if (number < array[mid])
                 {
-                     right = mid - 1;                    
+                    right = mid - 1;
                 }
                 else
                 {
                     left = mid + 1;
-                }             
+                }
             }
-            
-           
-            return (array[mid] == number) ? mid : -1;
+
+            return -1;
         }
     }
 }

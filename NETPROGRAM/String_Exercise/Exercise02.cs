@@ -17,7 +17,7 @@ namespace NETPROGRAM.String_Exercise
         public string UpperCase(string s)
         {
 
-            return string.Concat(s.Split('_').Select(x => Capital(x)));
+            return string.Concat(s.Split('_').Select(Capital));
         }
     }
 }

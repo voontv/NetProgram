@@ -12,16 +12,25 @@ namespace NETPROGRAM.ArrayExercise
         public bool IsSquareNumber(int n)
         {
 
-            for(var i = 1; i * i <= n; i++)
-            {
-                if(i * i > n)
-                {
-                    return false;
-                }
+            var left = -1;
+            var right = n;
 
-                if(i * i == n)
+            while (left <= right)
+            {
+                var mid = left + (right - left) / 2;
+
+                if (mid * mid == n)
                 {
                     return true;
+                }
+
+                if (mid * mid < n)
+                {
+                    left = mid + 1;
+                }
+                else
+                {
+                    right = mid - 1;
                 }
             }
 

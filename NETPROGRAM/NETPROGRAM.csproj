@@ -46,6 +46,8 @@
     <Compile Include="ArrayExercise\Exercise02.cs" />
     <Compile Include="ArrayExercise\Exercise03.cs" />
     <Compile Include="ArrayExercise\Exercise04.cs" />
+    <Compile Include="ArrayExercise\Exercise08.cs" />
+    <Compile Include="ArrayExercise\Exercise09.cs" />
     <Compile Include="BasicExercise\Exercise03.cs" />
     <Compile Include="BasicExercise\Exercise01.cs" />
     <Compile Include="BasicExercise\Exercise02.cs" />
@@ -61,6 +63,10 @@
     <Compile Include="BasicExercise\Exercise18.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="String_Exercise\Exercise02.cs" />
+    <Compile Include="String_Exercise\Exercise06.cs" />
+    <Compile Include="String_Exercise\Exercise08.cs" />
+    <Compile Include="String_Exercise\Exercise09.cs" />
+    <Compile Include="String_Exercise\Exercise05.cs" />
     <Compile Include="String_Exercise\LengString.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

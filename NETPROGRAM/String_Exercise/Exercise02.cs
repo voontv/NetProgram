@@ -13,9 +13,10 @@ namespace NETPROGRAM.String_Exercise
         {
             StringBuilder upperString = new StringBuilder();
 
-            foreach(var subString in s.Split('_'))
+            foreach (var subString in s.Split('_'))
             {
-                upperString.Append(subString.First().ToString().ToUpper() + subString.Remove(0,1));
+                upperString.Append(char.ToUpper(subString[0]));
+                upperString.Append(subString.Substring(1));
             }
 
             return upperString.ToString();

@@ -8,17 +8,16 @@ namespace NETPROGRAM.String_Exercise
 {
     public class Exercise02
     {
+        public string Capital(string word)
+        {
+
+            return Char.ToUpper(word[0]) + word.Substring(1);
+        }
 
         public string UpperCase(string s)
         {
-            string result = "";
 
-            foreach (var sub in s.Split('_'))
-            {
-                result = string.Concat(result, Char.ToUpper(sub[0]), sub.Substring(1));
-            }
-
-            return result;
+            return string.Concat(s.Split('_').Select(x => Capital(x))); ;
         }
     }
 }

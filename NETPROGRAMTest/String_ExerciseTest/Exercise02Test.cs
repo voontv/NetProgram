@@ -14,6 +14,15 @@ namespace NETPROGRAMTest.String_ExerciseTest
     {
 
         [TestMethod]
+        public void TestCapital()
+        {
+            var test = new Exercise02();
+
+            Assert.AreEqual(test.Capital("voon"), "Voon");
+            Assert.AreEqual(test.Capital("hoa"), "Hoa");
+        }
+
+        [TestMethod]
         public void TestUpperCase()
         {
             var test = new Exercise02();

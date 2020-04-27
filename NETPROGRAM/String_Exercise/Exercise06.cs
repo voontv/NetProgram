@@ -24,7 +24,7 @@ namespace NETPROGRAM.String_Exercise
                         stringBuilder.Append(s[i]);
                         if (j - i > 1)
                         {
-                            stringBuilder.Append((j - i));
+                            stringBuilder.Append(j - i);
                         }
 
                         i = j;

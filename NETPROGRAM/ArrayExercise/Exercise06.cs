@@ -17,6 +17,7 @@ namespace NETPROGRAM.ArrayExercise
             while (left <= right)
             {
                 var mid = left + (right - left) / 2;
+
                 if (array[mid] == number)
                 {
                     return mid;

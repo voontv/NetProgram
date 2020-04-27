@@ -12,21 +12,18 @@ namespace NETPROGRAM.String_Exercise
         public string SnakeCase(string s)
         {
             var stringBuilder = new StringBuilder();
+            stringBuilder.Append(s[0]);
 
-            for(var i = 0 ; i < s.Length; i++)
+            foreach (var ch in s.Substring(1))
             {
-
-                if (i > 0 && Char.IsUpper(s[i]))
+                if (Char.IsUpper(ch))
                 {
-                    stringBuilder.Append("_"+s[i].ToString());
+                    stringBuilder.Append('_');
                 }
-                else
-                {
-                    stringBuilder.Append(s[i]);
-                }
+                stringBuilder.Append(ch);
             }
 
-            return stringBuilder.ToString().ToLower();           
+            return stringBuilder.ToString().ToLower();
         }
     }
 }

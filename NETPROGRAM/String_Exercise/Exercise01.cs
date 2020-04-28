@@ -20,6 +20,7 @@ namespace NETPROGRAM.String_Exercise
                 {
                     stringBuilder.Append('_');
                 }
+
                 stringBuilder.Append(ch);
             }
 

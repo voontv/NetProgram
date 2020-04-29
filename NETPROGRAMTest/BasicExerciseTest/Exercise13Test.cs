@@ -1,6 +1,7 @@
 ﻿using NETPROGRAM.BasicExercise;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace NETPROGRAMTest.BasicExerciseTest
 {
@@ -24,11 +25,13 @@ namespace NETPROGRAMTest.BasicExerciseTest
         {
             var test = new Exercise13();
 
-            Assert.IsTrue(test.FindRangeIP("1234"));
-            Assert.IsTrue(test.FindRangeIP("1921681100"));
-            Assert.IsFalse(test.FindRangeIP("982123678987"));
-            Assert.IsFalse(test.FindRangeIP("256123546721"));
-            Assert.IsTrue(test.FindRangeIP("192168102104"));
+            Assert.IsTrue(Enumerable.SequenceEqual(test.FindRangeIP("1234"), new List<string>() { "1.2.3.4" }));
+            Assert.IsTrue(test.FindRangeIP("1921681100").Contains("192.168.11.00"));
+            Assert.IsTrue(test.FindRangeIP("1921681100").Contains("192.168.110.0"));
+            Assert.IsTrue(test.FindRangeIP("1921681100").Contains("192.168.1.100"));
+            Assert.IsTrue(test.FindRangeIP("1921681100").Contains("192.16.81.100"));
+            Assert.IsFalse(test.FindRangeIP("1921681100").Contains("192.16.811.00"));
+            Assert.IsFalse(test.FindRangeIP("1921681100").Contains("192.1.681.100"));
         }
     }
 }

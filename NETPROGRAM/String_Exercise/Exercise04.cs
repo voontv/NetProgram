@@ -42,12 +42,9 @@ namespace NETPROGRAM.String_Exercise
         {
             var sum = 0;
 
-            foreach (var index in Regex.Split(s, @"\D"))
+            foreach (var index in Regex.Split(s, @"\D+").Skip(1))
             {
-                if (!index.Equals(""))
-                {
-                    sum += int.Parse(index);
-                }
+                sum += int.Parse(index);
             }
 
             return sum;

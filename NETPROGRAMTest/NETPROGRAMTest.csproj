@@ -72,6 +72,7 @@
     <Compile Include="BasicExerciseTest\Exercise17Test.cs" />
     <Compile Include="BasicExerciseTest\Exercise18Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="String_ExerciseTest\Exercise01Test.cs" />
     <Compile Include="String_ExerciseTest\Exercise02Test.cs" />
     <Compile Include="String_ExerciseTest\Exercise06Test.cs" />
     <Compile Include="String_ExerciseTest\Exercise08Test.cs" />

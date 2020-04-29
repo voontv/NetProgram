@@ -10,18 +10,6 @@ namespace NETPROGRAM.String_Exercise
     public class Exercise04
     {
 
-        public int PowInt(int n, int m)
-        {
-            var mul = 1;
-
-            for (var i = 1; i <= m; i++)
-            {
-                mul *= n;
-            }
-
-            return mul;
-        }
-
         public int SumIntInString(string s)
         {
             var sum = 0;
@@ -54,7 +42,7 @@ namespace NETPROGRAM.String_Exercise
         {
             var sum = 0;
 
-            foreach (var index in Regex.Split(s, @"[\D]"))
+            foreach (var index in Regex.Split(s, @"\D"))
             {
                 if (!index.Equals(""))
                 {

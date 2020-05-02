@@ -3,6 +3,7 @@ namespace NETPROGRAM.BasicExercise
 {
     public class Exercise12
     {
+
   
         public bool SymmetryNumber(int number)
         {

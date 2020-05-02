@@ -40,14 +40,8 @@ namespace NETPROGRAM.String_Exercise
 
         public int SumIntRegex(string s)
         {
-            var sum = 0;
 
-            foreach (var index in Regex.Split(s, @"\D+").Skip(1))
-            {
-                sum += int.Parse(index);
-            }
-
-            return sum;
+            return Regex.Matches(s, @"\d+").Cast<Match>().Sum(x => int.Parse(x.Value));
         }
     }
 }
